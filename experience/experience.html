@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       body {
+            background-image: url("https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+        }
+
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            color: aliceblue;
+        }
+
+
+        ul.topnav li {
+            float: left;
+        }
+
+        ul.topnav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+
+        ul.topnav li a:hover:not(.active) {
+            background-color: rgb(14, 77, 36);
+        }
+
+        ul.topnav li a.active {
+            background-color: rgb(15, 170, 113);
+        }
+
+        ul.topnav li.right {
+            float: right;
+            text-align: center;
+            padding: 15px 15px;
+        }
+
+        li.header {
+            padding: 15px 15px;
+        }
+
+
+        .content {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            ul.topnav li.right,
+            ul.topnav li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="topnav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a class="active" href="#">Experience</a></li>
+        <li><a href="../more/more.html">About Me</a></li>
+
+        <li class="right">Zoe's Website</li>
+    </ul>
+
+    <div class="content">
+        <h2>Thanks for checking my Experience</h2>
+        <p>Before computer science I studied Biochemistry.</p>
+        <p>I have done some projects.</p>
+        <h4>will be graduate this fall.</h4>
+    </div>
+
+</body>
+
+</html>

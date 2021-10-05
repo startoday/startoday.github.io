@@ -1,2 +1,2 @@
-# startoday.github.io
-website for 5610
+# red.github.io
+webpages for cs5610
