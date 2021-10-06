@@ -37,6 +37,7 @@ ul.topnav li a {
     color: rgb(202, 219, 73);
     padding: 15px 15px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul.topnav li a:hover {
@@ -51,7 +52,7 @@ ul.topnav li a.active {
 ul.topnav li.right {
     float: right;
     padding: 15px 15px;
-    color: rgb(13, 144, 20);
+    color: rgb(134, 215, 138);
 }
 
 @media screen and (max-width: 600px) {
