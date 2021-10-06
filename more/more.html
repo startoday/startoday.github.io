@@ -31,17 +31,41 @@
             border-radius: 15%;
             border: 3px solid rgb(74, 72, 72);
         }
+        .movies{
+            width: 250px;
+            height:200px;
+            border-radius: 15%;
+            border: 3px solid rgb(74, 72, 72);
+        }
+
+        .scroll {
+            text-align: center;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: scroll;
+        }
+
 
         @media screen and (max-width: 600px) {
 
             .container {
-                grid-auto-flow: row;
-                grid-template-columns: 250px;
-
+                display: grid;
+                /* grid-auto-flow: row; */
+                grid-template-columns: 300px;
             }
-            
+
+            .scroll {
+                height:200px;
+                display: grid;
+                text-align: center;
+                overflow-y: scroll;
+            } 
+
             h5 {
                 font-size: 1.1rem;
+            }
+            h4 {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -65,18 +89,44 @@
         <h5>Enjoy watching anime and horror movies.</h5>
         <h5>In my free time like to practice drawing.</h5>
         <br>
-        <h5>Here are some of my draws:</h5>
+        <h4>Some of my draws:</h4>
+        <div class="container">
+                <div class="scroll">
+                    <img class="draws" src="../img/1.png">
+                    <img class="draws" src="../img/2.png">
+                    <img class="draws" src="../img/3.png">
+                    <img class="draws" src="../img/4.png">
+                </div>
+            </div>
+            <br>
+            <h4>My favoraite anime and movies:</h4>
+            <div class="container">
+                    <div class="scroll">
+                        <img class="movies" src="../img/5.png">
+                        <img class="movies" src="../img/6.png">
+                        <img class="movies" src="../img/7.png">
+                        <img class="movies" src="../img/8.png">
+                    </div>
+                </div>
+    </div>
 
-
+    <!-- <div class="container">
+        <div class="scroll">
+            <img class="draws" src="../img/1.png">
+            <img class="draws" src="../img/2.png">
+            <img class="draws" src="../img/3.png">
+            <img class="draws" src="../img/4.png">
+        </div>
     </div>
 
     <div class="container">
-        <img class="draws" src="../img/1.png">
-        <img class="draws" src="../img/2.png">
-        <img class="draws" src="../img/3.png">
-        <img class="draws" src="../img/4.png">
-    </div>
-
+            <div class="scroll">
+                <img class="draws" src="../img/1.png">
+                <img class="draws" src="../img/2.png">
+                <img class="draws" src="../img/3.png">
+                <img class="draws" src="../img/4.png">
+            </div>
+        </div> -->
 </body>
 
 </html>
