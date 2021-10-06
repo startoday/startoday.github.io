@@ -4,67 +4,90 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-       body {
+        body {
             background-image: url("https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            object-fit: cover;
-            width: 100%;
-            height: 100vh;
+            background-repeat: repeat;
             margin: auto;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif
         }
 
         ul.topnav {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             overflow: hidden;
-            background-color: #333;
-            color: aliceblue;
-        }
+            background-color: rgb(60, 80, 83, 0.8);
 
+            position: sticky;
+        }
 
         ul.topnav li {
             float: left;
+            text-align: center;
         }
 
         ul.topnav li a {
             display: block;
-            color: white;
-            text-align: center;
+            color: rgb(202, 219, 73);
             padding: 15px 15px;
             text-decoration: none;
         }
 
-        ul.topnav li a:hover:not(.active) {
-            background-color: rgb(14, 77, 36);
+        ul.topnav li a:hover {
+            transition: 0.2s;
+            background-color: rgba(40, 44, 41, 0.9);
         }
 
         ul.topnav li a.active {
-            background-color: rgb(15, 170, 113);
+            background-color: rgb(21, 68, 48, 0.9);
         }
 
         ul.topnav li.right {
             float: right;
-            text-align: center;
             padding: 15px 15px;
+            color: rgb(13, 144, 20);
         }
 
-        li.header {
-            padding: 15px 15px;
+        h2 {
+            padding: 15px;
         }
 
-
-        .content {
+        .wrapper {
             margin: auto;
             width: 80%;
             padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(40px, 2fr));
         }
 
+        .row {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(40px, 2fr));
+        }
+
+        .box {
+            padding: 10px;
+            font-size: 110%;
+        }
+        .title{
+            padding: 10px;
+            font-size: 130%;
+        }
+        .box:first-child{
+            color:rgb(57, 57, 216);
+        }
         @media screen and (max-width: 600px) {
 
+            /* change font size and floating for different screen size*/
             ul.topnav li.right,
             ul.topnav li {
+                font-size: 1.3rem;
                 float: none;
             }
         }
@@ -78,15 +101,24 @@
         <li><a href="../contact/contact.html">Contact</a></li>
         <li><a class="active" href="#">Experience</a></li>
         <li><a href="../more/more.html">About Me</a></li>
-
         <li class="right">Zoe's Website</li>
     </ul>
+    <h2>Programming projects</h2>
 
-    <div class="content">
-        <h2>Thanks for checking my Experience</h2>
-        <p>Before computer science I studied Biochemistry.</p>
-        <p>I have done some projects.</p>
-        <h4>will be graduate this fall.</h4>
+    <div class="wrapper">
+        <div class="title">Name</div>
+        <div class="title">Detail</div>
+        <div class="title">Showcase</div>
+        <div class="row">
+            <div class="box">Seashell</div>
+            <div class="box">a self-service learning platform for on-demand sandbox dev enviroment</div>
+            <div class="box">company internal tool not publically available</div>
+        </div>
+        <div class="row">
+            <div class="box">Sage</div>
+            <div class="box">a chat bot for processing queries on network related question on Falcon platform</div>
+            <div class="box">company internal tool not publically available</div>
+        </div>
     </div>
 
 </body>

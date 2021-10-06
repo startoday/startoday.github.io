@@ -7,107 +7,111 @@
         body {
             background-image: url("https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            object-fit: cover;
-            width: 100%;
-            height: 100vh;
+            background-repeat: repeat;
             margin: auto;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif
         }
 
         ul.topnav {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             overflow: hidden;
-            background-color: #333;
-            color: aliceblue;
-        }
+            background-color: rgb(60, 80, 83, 0.8);
 
+            position: sticky;
+        }
 
         ul.topnav li {
             float: left;
+            text-align: center;
         }
 
         ul.topnav li a {
             display: block;
-            color: white;
-            text-align: center;
+            color: rgb(202, 219, 73);
             padding: 15px 15px;
             text-decoration: none;
         }
 
-        ul.topnav li a:hover:not(.active) {
-            background-color: rgb(14, 77, 36);
+        ul.topnav li a:hover {
+            transition: 0.2s;
+            background-color: rgba(40, 44, 41, 0.9);
         }
 
         ul.topnav li a.active {
-            background-color: rgb(15, 170, 113);
+            background-color: rgb(21, 68, 48, 0.9);
         }
 
         ul.topnav li.right {
             float: right;
-            text-align: center;
             padding: 15px 15px;
+            color: rgb(13, 144, 20);
         }
 
-        li.header {
-            padding: 15px 15px;
-        }
-
-
-        body {
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        div.wrapper {
-            max-width: 80%;
-            height: 80%;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            width: 50%;
-    
-            padding: 10px;
-        }
-
-        .left,
-        .r {
-            
-            margin: 5px;
-            max-width: 50%;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: auto;
-  width: 50%;
-  padding: 10px;
-        }
-
-        .left {
-            align-items: center;
-            justify-content: center;
-        }
 
         .profile-picture {
+            position: relative;
+            top: 15px;
+            width: 250px;
             border-radius: 10%;
         }
 
-        p {
-            text-align: center;
+        div.wrapper {
+            display: flex;
+            flex-direction: column;
+            color: rgba(17, 87, 87, 0.9);
+            margin: auto;
             align-items: center;
             justify-content: center;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .upper,
+        .down {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
         }
 
         @media screen and (max-width: 600px) {
 
+            /* change font size and floating for different screen size*/
             ul.topnav li.right,
             ul.topnav li {
+                font-size: 1.3rem;
                 float: none;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .profile-picture {
+                position: relative;
+                top: 5px;
+                width: 200px;
+                border-radius: 5%;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -120,21 +124,21 @@
         <li><a href="contact/contact.html">Contact</a></li>
         <li><a href="experience/experience.html">Experience</a></li>
         <li><a href="more/more.html">About Me</a></li>
-
         <li class="right">Zoe's Website</li>
     </ul>
 
     <div class="wrapper">
-        <div class="left">
+
+        <div class="upper">
             <img class="profile-picture"
-                src="https://p3.itc.cn/q_70/images03/20210213/2a50d671a2d740cbb8e46e53d31d8e49.jpeg" width="200" />
-            <h1 class="name">Zoe Wang</h1>
-            <h4 class="subtitle">Seattle, WA</h4>
+                src="https://p3.itc.cn/q_70/images03/20210213/2a50d671a2d740cbb8e46e53d31d8e49.jpeg" />
+            <h1>Zoe Wang</h1>
+            <span class="subtitle">Seattle, WA</span>
         </div>
 
-        <div class="r">
-            <p class="bio">
-                Computer Science student at Northeastern University.
+        <div class="down">
+            <p>
+                Computer Science student at Northeastern University
             </p>
             <p>Thanks for visiting my website!</p>
         </div>

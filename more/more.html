@@ -1,88 +1,56 @@
 <!DOCTYPE html>
 <html>
-<!-- https://blog.csdn.net/qq_43319748/article/details/114849825 -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-       body {
+        body {
             background-image: url("https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            object-fit: cover;
-            width: 100%;
-            height: 100vh;
+            background-repeat: repeat;
             margin: auto;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif
         }
 
         ul.topnav {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             overflow: hidden;
-            background-color: #333;
-            color: aliceblue;
-        }
+            background-color: rgb(60, 80, 83, 0.8);
 
+            position: sticky;
+        }
 
         ul.topnav li {
             float: left;
+            text-align: center;
         }
 
         ul.topnav li a {
             display: block;
-            color: white;
-            text-align: center;
+            color: rgb(202, 219, 73);
             padding: 15px 15px;
             text-decoration: none;
         }
 
-        ul.topnav li a:hover:not(.active) {
-            background-color: rgb(14, 77, 36);
+        ul.topnav li a:hover {
+            transition: 0.2s;
+            background-color: rgba(40, 44, 41, 0.9);
         }
 
         ul.topnav li a.active {
-            background-color: rgb(15, 170, 113);
+            background-color: rgb(21, 68, 48, 0.9);
         }
 
         ul.topnav li.right {
             float: right;
-            text-align: center;
             padding: 15px 15px;
-        }
-
-        li.header {
-            padding: 15px 15px;
-        }
-
-
-        li a,
-        .dropbtn {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li.dropdown {
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #308174;
-            min-width: 160px;
-            /* box-shadow: 0px 8px 16px 0px rgba(168, 134, 227, 0.2); */
-            z-index: 1;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
+            color: rgb(13, 144, 20);
         }
 
         .content {
@@ -93,8 +61,10 @@
 
         @media screen and (max-width: 600px) {
 
+            /* change font size and floating for different screen size*/
             ul.topnav li.right,
             ul.topnav li {
+                font-size: 1.3rem;
                 float: none;
             }
         }
@@ -107,24 +77,18 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
         <li><a href="../experience/experience.html">Experience</a></li>
-        <li class="dropdown"><a class="active  dropbtn" href="#">About Me</a>
-            <div class="dropdown-content">
-                <a href="#">Hobbies</a>
-                <a href="#">Favorites</a>
-            </div>
-
+        <li><a class="active" href="#">About Me</a>
         </li>
         <li class="right">Zoe's Website</li>
     </ul>
 
     <div class="content">
         <h2>More about me</h2>
-        <table class=details>
-            <tr>
-                <td>Hobbies</td>
-                <td>: a lot</td>
-            </tr>
-        </table>
+        <div class="container">
+            <h5>I studied Biochemistry before Computer Science.</h5>
+            <h5>Enjoy watching anime and horror movies.</h5>
+            <h5>In my free time like to practice drawing.</h5>
+        </div>
     </div>
 
 </body>

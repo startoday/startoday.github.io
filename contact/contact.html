@@ -7,76 +7,84 @@
         body {
             background-image: url("https://www.popsci.com/uploads/2020/06/05/3NIEQB3SFVCMNHH6MHZ42FO6PA.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            object-fit: cover;
-            width: 100%;
-            height: 100vh;
+            background-repeat: repeat;
             margin: auto;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif
         }
-
 
         ul.topnav {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             overflow: hidden;
-            background-color: #333;
-            color: aliceblue;
-        }
+            background-color: rgb(60, 80, 83, 0.8);
 
+            position: sticky;
+        }
 
         ul.topnav li {
             float: left;
+            text-align: center;
         }
 
         ul.topnav li a {
             display: block;
-            color: white;
-            text-align: center;
+            color: rgb(202, 219, 73);
             padding: 15px 15px;
             text-decoration: none;
         }
 
-        ul.topnav li a:hover:not(.active) {
-            background-color: rgb(14, 77, 36);
+        ul.topnav li a:hover {
+            transition: 0.2s;
+            background-color: rgba(40, 44, 41, 0.9);
         }
 
         ul.topnav li a.active {
-            background-color: rgb(15, 170, 113);
+            background-color: rgb(21, 68, 48, 0.9);
         }
 
         ul.topnav li.right {
             float: right;
-            text-align: center;
             padding: 15px 15px;
+            color: rgb(13, 144, 20);
         }
 
-        li.header {
-            padding: 15px 15px;
-    
-        }
 
-        table {
-            font-size: 30px;
-            font-family: monospace;
+
+        .container {
+            position: fixed;
+            margin: auto;
+            width: 70%;
+            padding: 30px 60px;
         }
 
         .table_header {
-            font-size: 50px;
+            font-size: 2rem;
             font: bold;
-            font-family: sans-serif;
         }
-
-        .container {
-            margin: auto;
-            width: 80%;
-            padding: 10px;
+        .name{
+            width: 90px;
         }
-
         @media screen and (max-width: 600px) {
+
+            /* change font size and floating for different screen size*/
             ul.topnav li.right,
             ul.topnav li {
+                font-size: 1.3rem;
                 float: none;
+            }
+
+            .table_header {
+                font-size: 1.2rem;
+                font: bold;
+            }
+
+            td {
+                font-size: 1rem;
             }
         }
     </style>
@@ -94,22 +102,24 @@
     </ul>
 
     <div class="container">
+        <div class="table_header">Zoe's contact info</div>
         <table>
             <tr>
-                <td class="table_header">Zoe's contact info</td>
-            </tr>
-            <tr>
-                <td>Email</td>
+                <td class="name">Email</td>
                 <td>wang.zhe2@northeastern.edu</td>
             </tr>
             <tr>
-                <td>Github</td>
+                <td class="name">Github</td>
                 <td><a href="https://github.com/startoday">zoeyw</a></td>
             </tr>
             <tr>
-                <td>Linkedin</td>
+                <td class="name">Linkedin</td>
                 <td><a href="https://www.linkedin.com/in/zhe-wang-18495a193/">zhe-wang</a></td>
             </tr>
+            <tr>
+                    <td class="name">Facebook</td>
+                    <td>N/A</td>
+                </tr>
         </table>
     </div>
 </body>
