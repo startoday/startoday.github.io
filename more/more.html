@@ -4,20 +4,44 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-   <style>
+    <style>
         .content {
             margin: auto;
             width: 80%;
             padding: 10px;
         }
 
+        .container {
+            width: 80%;
+            align-content: center;
+            justify-self: center;
+            margin: auto;
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        .container>.draws {
+            object-fit: cover;
+            width: 100%;
+            max-height: 100%;
+        }
+
+        .draws {
+            width: 250px;
+            border-radius: 15%;
+            border: 3px solid rgb(74, 72, 72);
+        }
+
         @media screen and (max-width: 600px) {
 
-            /* change font size and floating for different screen size*/
-            ul.topnav li.right,
-            ul.topnav li {
-                font-size: 1.3rem;
-                float: none;
+            .container {
+                grid-auto-flow: row;
+                grid-template-columns: 250px;
+
+            }
+            
+            h5 {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -36,11 +60,21 @@
 
     <div class="content">
         <h2>More about me</h2>
-        <div class="container">
-            <h5>I studied Biochemistry before Computer Science.</h5>
-            <h5>Enjoy watching anime and horror movies.</h5>
-            <h5>In my free time like to practice drawing.</h5>
-        </div>
+
+        <h5>I studied Biochemistry before Computer Science.</h5>
+        <h5>Enjoy watching anime and horror movies.</h5>
+        <h5>In my free time like to practice drawing.</h5>
+        <br>
+        <h5>Here are some of my draws:</h5>
+
+
+    </div>
+
+    <div class="container">
+        <img class="draws" src="../img/1.png">
+        <img class="draws" src="../img/2.png">
+        <img class="draws" src="../img/3.png">
+        <img class="draws" src="../img/4.png">
     </div>
 
 </body>
