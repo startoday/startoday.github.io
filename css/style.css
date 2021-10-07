@@ -13,6 +13,7 @@ body {
 	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* provide a sticky transprant nav bar at top*/
 ul.topnav {
 	width: 100%;
 	list-style-type: none;
@@ -20,7 +21,6 @@ ul.topnav {
 	padding: 0px;
 	overflow: hidden;
 	background-color: rgb(60, 80, 83, 0.8);
-
 	position: sticky;
 	top: 0px;
 	z-index: 1;
